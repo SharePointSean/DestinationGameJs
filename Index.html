@@ -1,0 +1,105 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="script/script.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+          rel="stylesheet" type="text/css">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h3 id="title">Name the Famous Destination</h3>
+            </div>
+        </div>
+    </div>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 center-block">
+                    <div class="row">
+                        <img id="locationImage" src=""
+                             class="center-block img-responsive img-thumbnail">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="answers" class="section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-2 col-xs-1">&nbsp;</div>
+                <div class="col-md-6 col-sm-8 col-xs-10 center-block">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li id="answer1" class="active" data-toggle="modal"
+                            data-target="#myModal" data-correct="false"
+                            onclick="checkAnswer(this)">
+                            <a id="value1" href="#">Answer1</a>
+                        </li>
+                        <li id="answer2" class="active" data-toggle="modal"
+                            data-target="#myModal" data-correct="false"
+                            onclick="checkAnswer(this)">
+                            <a id="value2" href="#">Answer2</a>
+                        </li>
+                        <li id="answer3" class="active" data-toggle="modal"
+                            data-target="#myModal" data-correct="false"
+                            onclick="checkAnswer(this)">
+                            <a id="value3" href="#">Answer3</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-2 col-xs-1">&nbsp;</div>
+            </div>
+        </div>
+    </section>
+    <section class="modal fade" id="myModal">
+        <div class="modal-dialog modal-sm ">
+            <div class="modal-content">
+                <div id="modalHeader" class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true" data-backdrop="true">
+                        ×
+                    </button>
+                    <h4 class="modal-title" id="modalTitle">Response</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="modalMessage">The correct answer is: xxx</p>
+                </div>
+                <div class="modal-footer">
+                    <p id="modalScore" class="pull-left">
+                        Score: 0 points
+                    </p>
+                    <a class="btn btn-primary" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-9">
+                <p id="result">Your score is: 0</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <a id="playButton" class="btn btn-block btn-danger hidden"
+                   onclick="location.reload();">Play Again</a>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </section>
+
+</body>
+
+</html>
